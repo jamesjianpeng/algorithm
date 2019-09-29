@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>冒泡排序</title>
+</head>
+<body>
+    <script src="./bubbleSort.js"></script>
+    <script>
+
+    const data =  getRandomNum(10, 20, 0);
+    console.log(JSON.parse(JSON.stringify(data)))
+    const result = bubbleSort(data);
+    console.log(result)
+    // 0: 1, 4, 10, 12, 10, 5, 8, 0
+    // 1: [1], 4, 10, 12, 10, 5, 8, 0
+    // 2: [1, 4], 10, 12, 10, 5, 8, 0
+    // 3: [1, 4, 10], 12, 10, 5, 8, 0
+    // 4: [1, 4, 10, 12] 10, 5, 8, 0
+    // 5: [1, 4, 10, 10, 12], 5, 8, 0
+    // 6: [1, 4, 5, 10, 10, 12], 8, 0
+    // 7: [0, 1, 4, 5, 8, 10, 10, 12]
+
+    </script>
+</body>
+</html>
