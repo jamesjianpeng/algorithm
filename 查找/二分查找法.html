@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 二分查找算法：是针对有序序列 
+    const list = [1, 2, 3, 4, 5, 6, 6, 7, 8, 21, 21, 55, 88, 108];
+
+    function findTwo(list, key) {
+        if (Object.prototype.toString.call(list) !== '[object Array]') return;
+        let low = 0;
+        let hig = list.length - 1;
+        
+        while(low <= hig){
+            let mid = Math.floor(low + hig);
+            if (key === list[mid]) {
+                return mid + 1;
+            } else if (key > list[mid]) {
+                low = mid + 1;
+            } else if (key < list[mid]) {
+                hig = mid - 1
+            }
+        }
+
+        return -1;
+    } 
+
+    const result = findTwo(list, 7);
+    console.log(findTwo(list, 7));
+    console.log(findTwo(list, 55));
+    </script>
+</body>
+</html>
